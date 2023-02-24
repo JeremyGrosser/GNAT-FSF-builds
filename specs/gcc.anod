@@ -20,7 +20,7 @@ class GCC(spec("gh-artifact")):
         return [
             self.HTTPSSourceBuilder(
                 name=self.tarball,
-                url="https://github.com/gcc-mirror/gcc/refs/heads/master.tar.gz"
+                url="https://github.com/gcc-mirror/gcc/archive/refs/heads/master.tar.gz"
             )
         ]
 
