@@ -9,7 +9,7 @@ import os
 class GCC(spec("gh-artifact")):
     @property
     def version(self):
-        return "12.2.0"
+        return "13.0.1"
 
     @property
     def tarball(self):
@@ -20,8 +20,7 @@ class GCC(spec("gh-artifact")):
         return [
             self.HTTPSSourceBuilder(
                 name=self.tarball,
-                url="https://ftp.gnu.org/gnu/gcc/gcc-%s/%s"
-                % (self.version, self.tarball),
+                url="https://github.com/gcc-mirror/gcc/refs/heads/master.tar.gz"
             )
         ]
 
