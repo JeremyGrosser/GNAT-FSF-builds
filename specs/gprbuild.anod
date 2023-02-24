@@ -9,7 +9,7 @@ from datetime import date
 class GPRbuild(spec("gh-artifact")):
     @property
     def version(self):
-        return "22.0.0"
+        return "23.2"
 
     @property
     def tarball(self):
@@ -20,8 +20,8 @@ class GPRbuild(spec("gh-artifact")):
         return [
             self.HTTPSSourceBuilder(
                 name=self.tarball,
-                url="https://github.com/AdaCore/gprbuild/archive/v%s/%s"
-                % (self.version, self.tarball),
+                url="https://github.com/AdaCore/gprbuild/archive/refs/heads/%s.tar.gz"
+                % self.version
             ),
         ]
 

@@ -5,7 +5,7 @@ from e3.anod.loader import spec
 class GPRconfig_KB(spec("common")):
     @property
     def version(self):
-        return "22.0.0"
+        return "23.2"
 
     @property
     def tarball(self):
@@ -16,8 +16,8 @@ class GPRconfig_KB(spec("common")):
         return [
             self.HTTPSSourceBuilder(
                 name=self.tarball,
-                url="https://github.com/AdaCore/gprconfig_kb/archive/v%s/%s"
-                % (self.version, self.tarball),
+                url="https://github.com/AdaCore/gprconfig_kb/archive/refs/heads/%s.tar.gz"
+                % self.version
             )
         ]
 

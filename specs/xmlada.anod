@@ -8,7 +8,7 @@ from e3.anod.loader import spec
 class XMLAda(spec("common")):
     @property
     def version(self):
-        return "22.0.0"
+        return "23.2"
 
     @property
     def tarball(self):
@@ -19,8 +19,8 @@ class XMLAda(spec("common")):
         return [
             self.HTTPSSourceBuilder(
                 name=self.tarball,
-                url="https://github.com/AdaCore/xmlada/archive/v%s/%s"
-                % (self.version, self.tarball),
+                url="https://github.com/AdaCore/xmlada/archive/refs/heads/%s.tar.gz"
+                % self.version
             )
         ]
 
