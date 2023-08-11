@@ -78,6 +78,7 @@ class GDB(spec("common")):
             "--without-libusb",
             "--without-bugurl",
             "--without-guile",
+            "--without-python",
             "--disable-plugins",
             "--disable-gdbserver",
             "--with-static-standard-libraries",
